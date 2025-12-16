@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 15, 23, 42;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* PCPartPicker inspired utilities */
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded transition-colors;
+  }
+
+  .card {
+    @apply bg-white dark:bg-slate-800 rounded-lg shadow-md border border-gray-200 dark:border-slate-700;
+  }
+
+  .filter-section {
+    @apply mb-4 pb-4 border-b border-gray-200 dark:border-slate-700;
+  }
+}
